@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Héritage Numérique - QR Codes Personnalisés</title>
+    <meta name="description" content="Créez des QR codes personnalisés sur t-shirts et mugs pour préserver vos souvenirs. Hébergement 100% gratuit.">
+    
+    <!-- Favicon (gratuit) -->
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/qr-code--v1.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Styles personnalisés */
+        .hero-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .qr-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-qrcode text-2xl text-purple-600"></i>
+                <span class="font-bold text-xl">Héritage Numérique</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#produits" class="hover:text-purple-600">Produits</a>
+                <a href="#creation" class="hover:text-purple-600">Créer</a>
+                <a href="#contact" class="hover:text-purple-600">Contact</a>
+            </div>
+            <button class="md:hidden text-xl" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Menu mobile -->
+        <div class="md:hidden hidden bg-white py-2 px-4 shadow-md" id="mobile-menu">
+            <a href="#produits" class="block py-2 hover:text-purple-600">Produits</a>
+            <a href="#creation" class="block py-2 hover:text-purple-600">Créer</a>
+            <a href="#contact" class="block py-2 hover:text-purple-600">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">QR Codes Personnalisés</h1>
+                <p class="text-xl mb-6">Immortalisez vos souvenirs sur des t-shirts et mugs uniques</p>
+                <a href="#creation" class="bg-white text-purple-600 px-6 py-3 rounded-lg font-bold inline-block hover:bg-gray-100 transition">
+                    Créer maintenant <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative qr-animation">
+                    <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="T-shirt avec QR code" 
+                         class="rounded-lg shadow-2xl w-full max-w-md">
+                    <div class="absolute -bottom-5 -right-5 bg-white p-2 rounded-full shadow-lg">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-qrcode text-3xl text-purple-600"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produits Section -->
+    <section id="produits" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Nos Produits</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Produit 1 -->
+                <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1527719327859-c6ce80353573?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="T-shirt QR code" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">T-shirt Personnalisé</h3>
+                        <p class="text-gray-600 mb-4">À partir de 24,99€</p>
+                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition">
+                            Personnaliser <i class="fas fa-chevron-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Produit 2 -->
+                <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1595341595379-cf0eda8c1cda?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="Mug QR code" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Mug Personnalisé</h3>
+                        <p class="text-gray-600 mb-4">À partir de 19,99€</p>
+                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition">
+                            Personnaliser <i class="fas fa-chevron-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Produit 3 -->
+                <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="Coffret cadeau" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Coffret Cadeau</h3>
+                        <p class="text-gray-600 mb-4">À partir de 39,99€</p>
+                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition">
+                            Personnaliser <i class="fas fa-chevron-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Création QR Code -->
+    <section id="creation" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Créez Votre QR Code</h2>
+            
+            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-xl font-bold mb-6">Personnalisation</h3>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium mb-1">Type de contenu</label>
+                                <select class="w-full p-2 border rounded-lg">
+                                    <option>Lien web</option>
+                                    <option>Message texte</option>
+                                    <option>Photo/Vidéo</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-1">Votre contenu</label>
+                                <textarea class="w-full p-2 border rounded-lg" rows="3" placeholder="Entrez votre texte ou URL..."></textarea>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-1">Couleur</label>
+                                <div class="flex space-x-2">
+                                    <button class="w-8 h-8 bg-black rounded-full border-2 border-purple-600"></button>
+                                    <button class="w-8 h-8 bg-purple-600 rounded-full"></button>
+                                    <button class="w-8 h-8 bg-blue-500 rounded-full"></button>
+                                    <button class="w-8 h-8 bg-green-500 rounded-full"></button>
+                                </div>
+                            </div>
+                            
+                            <button class="w-full bg-purple-600 text-white py-3 rounded-lg font-bold mt-4 hover:bg-purple-700 transition">
+                                Générer QR Code <i class="fas fa-qrcode ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 bg-gray-100 p-8 flex flex-col items-center justify-center">
+                        <h3 class="text-xl font-bold mb-6">Aperçu</h3>
+                        <div class="w-48 h-48 bg-white rounded-lg shadow-md flex items-center justify-center mb-6">
+                            <i class="fas fa-qrcode text-6xl text-gray-400"></i>
+                        </div>
+                        <p class="text-sm text-gray-600 text-center">Votre QR code apparaîtra ici après génération</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Contactez-nous</h2>
+            
+            <div class="max-w-2xl mx-auto bg-gray-50 rounded-xl shadow-md overflow-hidden">
+                <div class="p-8">
+                    <!-- Formulaire Netlify (fonctionnel avec hébergement Netlify) -->
+                    <form name="contact" method="POST" data-netlify="true" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Votre nom</label>
+                            <input type="text" name="name" class="w-full p-2 border rounded-lg" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Votre email</label>
+                            <input type="email" name="email" class="w-full p-2 border rounded-lg" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Message</label>
+                            <textarea name="message" class="w-full p-2 border rounded-lg" rows="4" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-bold hover:bg-purple-700 transition">
+                            Envoyer <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                    
+                    <div class="mt-8 pt-6 border-t border-gray-200">
+                        <h3 class="font-bold mb-4">Autres moyens de contact</h3>
+                        <div class="flex flex-col space-y-2">
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-purple-600 mr-3"></i>
+                                <span>qrtresor@gmail.com</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-alt text-purple-600 mr-3"></i>
+                                <span>+33 6 12 34 56 78</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-qrcode text-2xl"></i>
+                        <span class="font-bold text-xl">Héritage Numérique</span>
+                    </div>
+                    <p class="text-gray-400 mt-2">Préservez vos souvenirs pour l'éternité</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-purple-400 transition"><i class="fab fa-facebook-f text-xl"></i></a>
+                    <a href="#" class="hover:text-purple-400 transition"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="#" class="hover:text-purple-400 transition"><i class="fab fa-twitter text-xl"></i></a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 Héritage Numérique. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Menu mobile
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Animation pour les boutons "Ajouter au panier"
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                this.innerHTML = '<i class="fas fa-check mr-2"></i>Ajouté';
+                this.classList.remove('bg-purple-600');
+                this.classList.add('bg-green-500');
+                setTimeout(() => {
+                    this.innerHTML = '<i class="fas fa-cart-plus mr-2"></i>Ajouter';
+                    this.classList.remove('bg-green-500');
+                    this.classList.add('bg-purple-600');
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
